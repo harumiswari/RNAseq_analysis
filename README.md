@@ -19,7 +19,7 @@ After trimming, align the reads to a reference genome or transcriptome. For geno
 In the provided bash script, HISAT2 is used for alignment, as it offers pre-built indexed reference genomes available for download at https://daehwankimlab.github.io/hisat2/download/. While indexing the reference genome is straightforward, it requires a good amount of time and computational resources.
 
 **Quantification**
-The final output from genome alignment tools, such as STAR or HISAT2, are BAM files. These files contain the aligned reads, and to get quantification, a tool like featureCounts is required to count the number of reads mapped to each gene or feature. Salmon and Kallisto skip the need for BAM files by directly quantifying transcript abundances from the RNA-Seq reads. They provide raw read counts and TPM values as their final output, so no additional quantification tool is needed.
+The final output from genome alignment tools, such as STAR or HISAT2, are BAM files. These files contain the aligned reads, and to get quantification, a tool like featureCounts is required to count the number of reads mapped to each gene or feature. In featurecount, we will need gtf file which can be downloaded in https://www.ensembl.org/info/data/ftp/index.html. Salmon and Kallisto skip the need for BAM files by directly quantifying transcript abundances from the RNA-Seq reads. They provide raw read counts and TPM values as their final output, so no additional quantification tool is needed.
 https://github.com/harumiswari/RNAseq_analysis/blob/master/rnaseq.sh
 
 ----------end of bash script code --------------
